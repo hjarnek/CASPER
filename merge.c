@@ -465,7 +465,7 @@ void make_kmerindex_jellyfish( string filename, int flag ) {
 	command  = "jellyfish count -m "+itoa(KMERSIZE)+" -L "+ itoa(KMER_LOWER_LIMIT) +
 	           " -o "+PREFIX+"jellykmer "
 //             "-c 3 -s 100 -t "+itoa(NUM_THREAD)+" "+filename;
-             "-c 3 -s 10M -t "+itoa(NUM_THREAD)+" "+filename;
+             "-c 3 -s 10M -t "+itoa(NUM_THREAD)+" \""+filename+"\"";
 	cout << "     -  " << command << endl;
 	result = system( command.c_str() );
 
